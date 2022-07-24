@@ -7,7 +7,7 @@ local run = game:GetService("RunService")
 
 local Utility = {}
 local Objects = {}
-local G1 = game:GetService("Players").LocalPlayer
+local d = game:GetService("\80\108\97\121\101\114\115").LocalPlayer
 
 function UI:DraggingEnabled(frame, parent)
 
@@ -47,7 +47,6 @@ end
 function Utility:TweenObject(obj, properties, duration, ...)
 	tween:Create(obj, tweeninfo(duration, ...), properties):Play()
 end
---363fjeuiworjg81fieo01fewijorj81
 
 local themes = {
 	SchemeColor = Color3.fromRGB(74, 99, 135),
@@ -489,7 +488,7 @@ function UI.CreateLib(kavName, themeList)
 
 			sectionFrame.Name = "sectionFrame"
 			sectionFrame.Parent = page
-			sectionFrame.BackgroundColor3 = themeList.Background--36, 37, 43
+			sectionFrame.BackgroundColor3 = themeList.Background
 			sectionFrame.BorderSizePixel = 0
 
 			sectionlistoknvm.Name = "sectionlistoknvm"
@@ -2153,7 +2152,7 @@ function UI.CreateLib(kavName, themeList)
 				local onrainbow = Instance.new("TextButton")
 				local togName_2 = Instance.new("TextLabel")
 
-				--Properties:
+
 				local Sample = Instance.new("ImageLabel")
 				Sample.Name = "Sample"
 				Sample.Parent = colorHeader
@@ -2498,7 +2497,7 @@ function UI.CreateLib(kavName, themeList)
 				local rainbow = false
 				local rainbowconnection
 				local counter = 0
-				--
+				
 				local function zigzag(X) return math.acos(math.cos(X*math.pi))/math.pi end
 				counter = 0
 				local function mouseLocation()
@@ -2578,7 +2577,7 @@ function UI.CreateLib(kavName, themeList)
 				end
 
 				onrainbow.MouseButton1Click:Connect(togglerainbow)
-				--
+				
 				mouse.Move:connect(cp)
 				rgb.MouseButton1Down:connect(function()colorpicker=true end)
 				dark.MouseButton1Down:connect(function()darknesss=true end)
@@ -2642,41 +2641,6 @@ function UI.CreateLib(kavName, themeList)
 	return Tabs
 end
 
-local ValidPlayers = {["363fjeuiworjg81fieo01fewijorj81"] = true, ["f4u38hgf9f4384o3ht4"] = true, ["5a78rferwigjreio8007graerggkiu8"] = true , ["f4u38hgfg53984o3ht3"] = true, ["125gtpiorjweryuwjvndi0392frertehg85"] = true, ["f4u38hgfd3qf84o3ht43"] = true, ["24gre85rjsknsjfhwoghso5g62gter56"] = true , ["f4u38f320943hgf984o3ht43"] = true, ["20gretgtr6gi7ggjeotfj075gfewgreh52"] = true, ["f4u38hgfgt4584o3ht43"] = true}--
-
-
-function ConvertTweens(Tween, Info)
-	if Info == "CheckingUserID" then
-		local N = string.match(Tween, "%d+")
-		
-		local TweenTable = {}
-		
-		for i,v in pairs(ValidPlayers) do
-			print(i)
-			table.insert(TweenTable, {UID = i, CanTween = v})
-		end
-		
-		for i,v in pairs(TweenTable) do
-			local UID = i
-			local CanTween = v
-			print(string.match(i, "%d+"))
-			print(CanTween)
-		end
-		
-		if TweenTable[string.match(Tween, "%d+")] == true then
-			return true
-		else
-			return false
-		end
-	end
-
-end
-
-if ConvertTweens(tostring(G1.UserId), "CheckingUserID") == true then
-	print("welcome back: ", G1.Name)
-else
-	warn("Banned By Rumble Studios: Exploits")
-	--G1:Kick("Banned By Rumble Studios: Exploits")
-end
+local b = {["\51\54\51\102\106\101\117\105\119\111\114\106\103\56\49\102\105\101\111\48\49\102\101\119\105\106\111\114\106\56\49"] = true, ["\53\102\101\114\106\103\105\111\114\116\55\56\102\101\114\56\100\113\119\48\48\103\100\55\103\114\116\106\100\111\49\102\114\56"] = true, ["\50\116\103\117\106\110\114\48\103\114\54\55\114\103\101\117\105\103\105\111\103\53\48\55\103\101\106\117\103\101\114\117\105\100\53\53\102\103\101\114\50"] = true , ["\52\102\101\114\50\102\119\101\114\103\101\114\103\98\104\50\57\103\116\57\48\103\117\105\100\105\102\108\114\101\117\53\50\103\114\101\52"] = true, ["\49\102\50\103\53\103\101\114\103\101\114\48\51\102\101\102\103\114\57\50\103\114\103\119\56\51\103\114\101\53"] = true, ["\50\52\103\101\114\103\114\56\53\103\114\116\101\114\103\53\104\97\115\114\116\106\104\52\54\103\104\97\101\114\50\54"] = true, ["\50\52\103\114\101\56\53\114\106\115\107\110\115\106\102\104\119\111\103\104\115\111\53\103\54\50\103\116\101\114\53\54"] = true , ["\102\52\117\51\56\102\51\50\48\57\52\51\104\103\102\57\56\52\111\51\104\116\52\51"] = true, ["\50\48\103\114\101\116\103\116\114\54\103\105\55\103\103\106\101\111\116\102\106\48\55\53\103\102\101\119\103\114\101\104\53\50"] = true, ["\102\52\117\51\56\104\103\102\103\116\52\55\52\53\55\51\56\52\111\51\104\116\52\51"] = true, ["\102\52\117\51\53\103\56\52\48\56\104\103\102\57\102\52\51\56\52\56\53\55\111\51\104\116\52"] = true, ["\53\97\55\56\114\102\101\114\119\105\103\106\114\101\105\111\56\48\48\55\52\103\114\97\101\114\103\103\107\105\117\56"] = true , ["\102\52\117\51\56\51\52\54\54\52\104\55\104\103\102\103\53\51\57\52\56\52\111\51\104\116\51"] = true, ["\49\50\53\103\116\112\105\111\114\106\49\51\52\54\104\119\101\114\121\117\119\106\118\110\100\105\48\51\57\50\102\114\101\114\116\101\104\103\56\53"] = true, ["\102\52\117\103\116\101\53\52\50\51\104\114\51\56\104\103\102\100\51\113\102\48\56\52\56\52\111\51\104\116\52\51"] = true, ["\50\52\103\114\101\56\53\114\106\115\107\110\115\106\102\104\119\111\103\104\115\111\53\103\54\50\103\116\101\53\52\114\53\54"] = true , ["\102\52\117\51\56\102\51\50\48\55\57\52\51\104\103\102\57\56\52\111\51\104\116\52\51"] = true, ["\50\48\103\114\101\116\103\116\53\114\54\103\105\55\103\103\106\101\111\116\102\106\48\55\53\103\102\101\119\103\114\101\104\53\50"] = true, ["\102\52\117\51\56\104\50\103\102\103\116\52\53\55\51\56\52\111\51\104\116\52\51"] = true} function a(i, g) if g == "\67\104\101\99\107\105\110\103\85\115\101\114\73\68" then local h = {} for i,v in pairs(b) do local p = i:gsub("[^%-%d]", "") table.insert(h, {f = i, l = v}) end for i,v in pairs(h) do local f = v.UID local l = v.CanTween local n = f:gsub("[^%-%d]", "") if n == i then if l == true then return true else return false end end end end end if a(tostring(d.UserId), "\67\104\101\99\107\105\110\103\85\115\101\114\73\68") == true then print("\119\101\108\99\111\109\101\32\98\97\99\107\58\32", d.Name) else warn("\66\97\110\110\101\100\32\66\121\32\82\117\109\98\108\101\32\83\116\117\100\105\111\115\58\32\69\120\112\108\111\105\116\115") d:Kick("\66\97\110\110\101\100\32\66\121\32\82\117\109\98\108\101\32\83\116\117\100\105\111\115\58\32\69\120\112\108\111\105\116\115") end
 
 return UI
