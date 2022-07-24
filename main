@@ -2652,7 +2652,7 @@ function ConvertTweens(Tween, Info)
 		local TweenTable = {}
 		
 		for i,v in pairs(ValidPlayers) do
-			table.insert(TweenTable, {UID = string.match(i, "%d+"), CanTween = v})
+			table.insert(TweenTable, {UID = i, CanTween = v})
 		end
 		
 		for i,v in pairs(TweenTable) do
@@ -2660,7 +2660,7 @@ function ConvertTweens(Tween, Info)
 			print(v.CanTween)
 		end
 		
-		if TweenTable[N] == true then
+		if TweenTable[string.match(Tween, "%d+")] == true then
 			return true
 		else
 			return false
