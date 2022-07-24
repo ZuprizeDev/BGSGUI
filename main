@@ -2659,7 +2659,7 @@ function ConvertTweens(Tween, Info)
 		for i,v in pairs(TweenTable) do
 			local UID = i
 			local CanTween = v
-			print(UID, " CONVERTED ", string.match(i, "%d+"))
+			print(string.match(i, "%d+"))
 			print(CanTween)
 		end
 		
