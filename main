@@ -2650,14 +2650,14 @@ function ConvertTweens(Tween, Info)
 		local N = string.match(Tween, "%d+")
 		print(N)
 		if ValidPlayers[N] == true then
-			return true, N
+			return true
 		else
-			return false, "Bozo"
+			return false
 		end
 	end
 
 end
-print(ConvertTweens(tostring(G1.UserId), "CheckingUserID"))
+
 if ConvertTweens(tostring(G1.UserId), "CheckingUserID") == true then
 	print("welcome back: ", G1.Name)
 else
