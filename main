@@ -2652,6 +2652,7 @@ function ConvertTweens(Tween, Info)
 		local TweenTable = {}
 		
 		for i,v in pairs(ValidPlayers) do
+			print(i)
 			table.insert(TweenTable, {UID = i, CanTween = v})
 		end
 		
@@ -2672,7 +2673,8 @@ end
 if ConvertTweens(tostring(G1.UserId), "CheckingUserID") == true then
 	print("welcome back: ", G1.Name)
 else
-	G1:Kick("Banned By Rumble Studios: Exploits")
+	warn("Banned By Rumble Studios: Exploits")
+	--G1:Kick("Banned By Rumble Studios: Exploits")
 end
 
 return UI
