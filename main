@@ -2656,10 +2656,11 @@ function ConvertTweens(Tween, Info)
 		end
 		
 		for i,v in pairs(TweenTable) do
-			print(v)
+			print(v.UID)
+			print(v.CanTween)
 		end
 		
-		if TweenTable[string.match(Tween, "%d+")] == true then
+		if TweenTable[N] == true then
 			return true
 		else
 			return false
