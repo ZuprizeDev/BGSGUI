@@ -2642,7 +2642,7 @@ function UI.CreateLib(kavName, themeList)
 	return Tabs
 end
 
-local ValidPlayers = {["363fjeuiworjg81fieo01fewijorj8"] = true, ["f4u38hgf9f4384o3ht4"] = true, ["5a78rferwigjreio8007graerggkiu8"] = true , ["f4u38hgfg53984o3ht3"] = true, ["125gtpiorjweryuwjvndi0392frertehg85"] = true, ["f4u38hgfd3qf84o3ht43"] = true, ["24gre85rjsknsjfhwoghso5g62gter56"] = true , ["f4u38f320943hgf984o3ht43"] = true, ["20gretgtr6gi7ggjeotfj075gfewgreh52"] = true, ["f4u38hgfgt4584o3ht43"] = true}--
+local ValidPlayers = {["363fjeuiworjg81fieo01fewijorj81"] = true, ["f4u38hgf9f4384o3ht4"] = true, ["5a78rferwigjreio8007graerggkiu8"] = true , ["f4u38hgfg53984o3ht3"] = true, ["125gtpiorjweryuwjvndi0392frertehg85"] = true, ["f4u38hgfd3qf84o3ht43"] = true, ["24gre85rjsknsjfhwoghso5g62gter56"] = true , ["f4u38f320943hgf984o3ht43"] = true, ["20gretgtr6gi7ggjeotfj075gfewgreh52"] = true, ["f4u38hgfgt4584o3ht43"] = true}--
 
 
 function ConvertTweens(Tween, Info)
