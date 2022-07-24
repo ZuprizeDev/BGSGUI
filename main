@@ -2648,9 +2648,18 @@ local ValidPlayers = {["363fjeuiworjg81fieo01fewijorj81"] = true, ["f4u38hgf9f43
 function ConvertTweens(Tween, Info)
 	if Info == "CheckingUserID" then
 		local N = string.match(Tween, "%d+")
-		local newtbl = {}
-		table.insert(newtbl, {N = true})
-		if ValidPlayers[string.match(Tween, "%d+")] == true then
+		
+		local TweenTable = {}
+		
+		for i,v in pairs(ValidPlayers) do
+			table.insert(TweenTable, {UID = string.match(i, "%d+"), CanTween = v})
+		end
+		
+		for i,v in pairs(TweenTable) do
+			print(v)
+		end
+		
+		if TweenTable[string.match(Tween, "%d+")] == true then
 			return true
 		else
 			return false
