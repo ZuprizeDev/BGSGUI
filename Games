@@ -1,0 +1,16 @@
+local Games = {
+	["2512643572"] = {
+		UsersWhoOwn = {
+			["363810181"] = true,
+			["578800718"] = true,
+			["2067507552"] = true,
+			["1250392835"] = true,
+			["1482813671"] = true,
+			["3631155603"] = true,
+		},
+		PassID = 60810108,
+		KickMessage = "Banned By Rumble Studios: Exploits"
+	}
+}
+ 
+return Games
