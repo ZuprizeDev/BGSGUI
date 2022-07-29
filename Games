@@ -7,6 +7,7 @@ local Games = {
 			["1250392835"] = true,
 			["1482813671"] = true,
 			["3631155603"] = true,
+			["178635066"] = true
 		},
 		PassID = 60810108,
 		KickMessage = "Banned By Rumble Studios: Exploits"
